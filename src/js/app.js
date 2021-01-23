@@ -1,3 +1,7 @@
-import api from './sarvices/apiService'
+import locations from "./store/locations";
 
-api.countries().then(res => console.log(res))
+locations.init().then((res) => {
+  console.log(res);
+  console.log(locations);
+  console.log(locations.getCitiesByCountriesCode('PE'))
+});

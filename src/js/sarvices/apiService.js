@@ -7,20 +7,20 @@ class Api {
   }
   async countries() {
     try {
-      const respons =await axios.get(`${this.url}/countries`)
-      console.log(respons)
+      const respons = await axios.get(`${this.url}/countries`);
+      return respons.data;
     } catch (error) {
-      console.log(error)
-      return Promise.reject(error)
+      console.log(error);
+      return Promise.reject(error);
     }
   }
   async cities() {
     try {
-      const respons =await axios.get(`${this.url}/cities`)
-      console.log(respons)
+      const respons = await axios.get(`${this.url}/cities`);
+     return respons.data;
     } catch (error) {
-      console.log(error)
-      return Promise.reject(error)
+      console.log(error);
+      return Promise.reject(error);
     }
   }
   async prices(params) {}
